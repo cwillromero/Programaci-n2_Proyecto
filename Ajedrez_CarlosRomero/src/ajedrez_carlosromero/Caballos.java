@@ -26,6 +26,7 @@ public class Caballos extends Piezas {
 
     @Override
     public boolean ValidaciondeMovimiento(String Nombre, int FilaA, int ColumnaA, int FilaB, int ColumnaB,Object[][] Tablero) {
+        try{
         int x=0;
         if(Nombre.equals("♘")){
             if ((FilaB-FilaA==1 && ColumnaB-ColumnaA==2) && 
@@ -134,6 +135,9 @@ public class Caballos extends Piezas {
             return false;
         else 
             return true;
+        }catch(Exception e){
+            return true;
+        }
     }
 
     @Override

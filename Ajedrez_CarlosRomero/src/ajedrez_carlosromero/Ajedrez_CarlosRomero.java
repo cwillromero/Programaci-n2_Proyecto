@@ -535,6 +535,7 @@ public class Ajedrez_CarlosRomero {
     }
     
     public static boolean Jaquemate(){
+        try{
         boolean v=false;
         String j="";
         for (int i = 0; i < 9; i++) {
@@ -550,7 +551,10 @@ public class Ajedrez_CarlosRomero {
             I.JaqueMateBlanco();
             return true;
         }
-        return v;
+        }catch(Exception e){
+        return false;
+        }
+        return false;
     }
     
     public static boolean Coronar(String N, int F, int Co){
@@ -661,6 +665,7 @@ public class Ajedrez_CarlosRomero {
     }
     
     public static boolean JaqueNegro(){
+        try{
         int f=0, c=0;
         for (int i = 1; i < 9; i++) {
             for (int j = 1; j < 9; j++) {
@@ -754,10 +759,14 @@ public class Ajedrez_CarlosRomero {
        if((tablero[f+1][c]=="♚" || tablero[f-1][c]=="♚") || (tablero[f-1][c+1]=="♚" || tablero[f-1][c-1]=="♚") || (tablero[f][c-1]=="♚" || tablero[f][c+1]=="♚")){
            I.Jaque();
        }
+        }catch(Exception e){
+            return false;
+        }
         return false;
     }
     
     public static boolean JaqueBlanco(){
+        try{
         int f=0, c=0;
         for (int i = 1; i < 9; i++) {
             for (int j = 1; j < 9; j++) {
@@ -852,6 +861,9 @@ public class Ajedrez_CarlosRomero {
            I.Jaque();
        }
        //_____________Jaque a Rey Blanco Caballo  ____________
+        }catch(Exception e){
+        return false;
+        }
         return false;
     }
     
