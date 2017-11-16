@@ -24,10 +24,11 @@ public class Ajedrez_CarlosRomero {
 //        tablero[8][5]="♝";
         Impresion(tablero,tablero.length-1,0);
         while (!Gana.equals("JAQUEMATE")) {
+            try{
             if(Jaquemate()==true){
              break;
              }
-            System.out.println(ColorTablero.FONDO_CYAN+ColorTablero.LETRA_BLANCO+"Turno Piezas Blancas:"
+            System.out.println(ColorTablero.FONDO_VERDE+ColorTablero.LETRA_BLANCO+"Turno Piezas Blancas:"
             +ColorTablero.RESET);
              MovimientoBlanco();
             if(Jaquemate()==true){
@@ -36,6 +37,10 @@ public class Ajedrez_CarlosRomero {
             System.out.println(ColorTablero.FONDO_ROJO+ColorTablero.LETRA_BLANCO+"Turno Piezas Negras:"
             +ColorTablero.RESET);
             MovimientoNegro();
+            }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error!", "Error", 0);
+            }
+            
         }
         I.Fin();
     }
