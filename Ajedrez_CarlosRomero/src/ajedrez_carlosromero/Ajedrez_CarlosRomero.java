@@ -39,6 +39,12 @@ public class Ajedrez_CarlosRomero {
             MovimientoNegro();
             }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Error!", "Error", 0);
+            String[] S={"Sí","No"};
+            String P="";
+            P=(String) JOptionPane.showInputDialog(null, "Continuar?:","Continuar?",0, null, S, S[0]);
+            if(P.equals(S[1])){
+                break;
+            }
             }
             
         }
