@@ -1,4 +1,4 @@
-
+    
 package ajedrez_carlosromero;
 
 public class ColorTablero {

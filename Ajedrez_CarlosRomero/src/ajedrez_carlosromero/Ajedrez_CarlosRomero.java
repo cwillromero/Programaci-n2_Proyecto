@@ -18,10 +18,8 @@ public class Ajedrez_CarlosRomero {
         I.Bienvenido();
         String Gana="";
         TableroOriginal();
-//        tablero[4][1]="♚";
-//        tablero[6][6]="♚";
-//       
-//        tablero[8][5]="♝";
+//        tablero[8][1]="♙";
+//        tablero[1][1]="♙";
         Impresion(tablero,tablero.length-1,0);
         while (!Gana.equals("JAQUEMATE")) {
             try{
@@ -38,11 +36,10 @@ public class Ajedrez_CarlosRomero {
             +ColorTablero.RESET);
             MovimientoNegro();
             }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Error!", "Error", 0);
-            String[] S={"Sí","No"};
+            String[] S={"No","Sí"};
             String P="";
-            P=(String) JOptionPane.showInputDialog(null, "Continuar?:","Continuar?",0, null, S, S[0]);
-            if(P.equals(S[1])){
+            P=(String) JOptionPane.showInputDialog(null, "Error!\nContinuar?","Error!",0, null, S, S[0]);
+            if(P.equals(S[0])){
                 break;
             }
             }
